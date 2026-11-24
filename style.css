@@ -1,0 +1,174 @@
+
+/* ==============================
+   VERSION 3 - ADVANCED SECTIONS
+============================== */
+
+/* EXPERIENCE TIMELINE */
+.experience-list {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid rgba(139,123,255,0.3);
+  margin-left: 10px;
+}
+
+.experience-item {
+  position: relative;
+  padding: 0 0 35px 25px;
+}
+
+.experience-marker {
+  position: absolute;
+  left: -39px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 15px var(--accent);
+}
+
+.experience-content {
+  padding: 25px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.experience-content h3 {
+  font: 600 20px 'Space Grotesk', sans-serif;
+  margin: 10px 0;
+}
+
+.experience-content p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.experience-date {
+  color: var(--accent2);
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* SERVICES */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 25px 20px;
+  border-radius: 13px;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--accent);
+}
+
+.service-icon {
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.service-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* CODING PROFILES */
+.coding-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.coding-card {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.coding-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent2);
+}
+
+.coding-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.coding-card p {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* FAQ */
+.faq-list {
+  display: grid;
+  gap: 13px;
+}
+
+.faq-list details {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.faq-list summary {
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-list summary::after {
+  content: "+";
+  float: right;
+  color: var(--accent2);
+  font-size: 20px;
+}
+
+.faq-list details[open] summary::after {
+  content: "−";
+}
+
+.faq-list details p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .services-grid,
+  .coding-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 600px) {
+  .services-grid,
+  .coding-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-content {
+    padding: 18px;
+  }
+}
